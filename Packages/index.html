@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+    <!-- Added Font Awesome from example of footer in: https://bootstrapexamples.com/@mateo/basic-footer -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!--Added jQuery for Phone Number input on form: https://www.w3schools.com/jquery/jquery_get_started.asp  -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jqueryfunctions.js"></script>
+    
+    <title>
+        Tour Packages
+    </title>
+</head>
+
+<body>
+    <!-- Navbar from Bootstrap: https://getbootstrap.com/docs/5.0/components/navbar/#scrolling -->
+    <div id="nomad-banner">
+        <img src="../Images/nomadlogoplaceholder2.png" alt="Nomad Logo">
+        <!-- Resized image to fit heigh of the logo, as it was loading for a long time. Original image is in the folder, can be opened with GIMP (free) to see original size -->
+        <img src="../Images/mongolia-flag-waving-transparent-background/448dfff0-9ebf-400b-817a-8a320207bced.png" alt="Mongolian Flag">
+    </div>
+    
+    <!-- Collapsing navbar with scrolling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="../index.html">
+                    Home
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    About
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../Contact-Us/index.html">
+                    Contact Us
+                </a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeason" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Season
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSeason">
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Winter
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Spring
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Summer
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Autumn
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Activity
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivity">
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Hiking
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Hunting
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Camping
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="index.html">
+                        Clubbing
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    Interactive Map
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../Recommendations/index.html">
+                    Recommendations
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    Need More Help?
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../Important-Information/index.html">
+                    Important Info
+                </a>
+                </li>
+            </ul>
+            
+            <!-- Search bar -->
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" id="search-bar" type="search" placeholder="Search.." aria-label="Search">
+                <button class="btn btn-outline-success" id="search-btn" type="submit">
+                    🔍︎
+                </button>
+            </form> -->
+
+            <!-- Login button -->
+            <a href="../Login/index.html" class="btn btn-outline-success" id="login-btn">
+                Login
+            </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Info Page banner as per wireframe -->
+    <div class="banner">
+        <h1>Package A</h1>
+    </div>
+    
+    <!-- 3 divs needed to match wireframe -->
+    <div class="important-info-container">
+        
+    <!-- Picture Background -->
+    <img src="../Images/pexels-phaeng-_yo-1503481-35128394-and-cottonbro-9466552-resized.png" alt="Camel At The Desert in Inner Mongolia by Irina Iriser, Pexels.com" style="width: 100%; height: 100%;">
+        
+        <!-- Div that contains the text -->
+        <div class="packages-content">
+            <h1 class="package-A">Enjoy a Nomad Adventure Eagle Hunting!</h1>
+
+            <div>
+                <img src="../Images/pexels-julia-volk-6408361-resized.png" alt="Men in the Desert Riding Horses in Mongolia by Julia Volk, Pexels" style="width: 100%; height: 100%;">
+            </div>
+            <section class="tour-package">
+            
+            <br>
+            <br>
+            <p>
+                Step into the ancient world of Mongolian nomads and experience one of the 
+                world's oldest hunting traditions — <strong>eagle hunting</strong> with the Kazakh people 
+                of Western Mongolia. This immersive expedition invites you to live alongside 
+                real herding families, ride through breathtaking landscapes on horseback, 
+                and witness the extraordinary bond between a hunter and a golden eagle.
+            </p>
+
+            <h2 class="titles">
+                Tour Overview:
+            </h2>
+            <p>
+                This 8-day cultural adventure takes place mainly in the 
+                <strong>Altai Mountains of Bayan-Ölgii Province</strong>, home to Mongolia's ethnic Kazakh 
+                community. The region is famous for its snow-capped peaks, glacier valleys 
+                and the deep-rooted art of <em>berkutchi</em> — hunting foxes and hares with trained 
+                female golden eagles. Guests will stay with local nomadic families, learning 
+                about their seasonal migrations, livestock care, traditional Kazakh crafts 
+                and the delicate training of the golden eagle.
+            </p>
+
+            <h2 class="titles">
+                Highlights:
+            </h2>
+            <p>
+                Live in a traditional <strong>Kazakh ger</strong> surrounded by the towering Altai Mountains, 
+                where you will take part in the daily life of nomadic herders. Watch how 
+                golden eagles are fed, cared for and trained. Learn basic riding techniques 
+                from expert horsemen and follow a real hunting route with a local 
+                <strong>berkutchi</strong>. Guests may also participate in traditional Kazakh cooking, 
+                embroidery, throat singing and musical performances using instruments such 
+                as the <em>dombra</em>.
+            </p>
+
+            <h2 class="titles">
+                Itinerary:
+            </h2>
+
+            <h3 class="titles">
+                Day 1 — Arrival in Ulaanbaatar
+            </h3>
+            <p>
+                Your guide meets you at Chinggis Khaan International Airport. Depending on 
+                your arrival time, you may visit Sükhbaatar Square or the National Museum of 
+                Mongolia to gain an introduction to nomadic history before your adventure begins.
+            </p>
+
+            <h3 class="titles">
+                Day 2 — Flight to Bayan-Ölgii & Transfer to Nomadic Family
+            </h3>
+            <p>
+                Morning domestic flight to <strong>Ölgii</strong>, capital of the westernmost province. 
+                Meet your Kazakh guide and drive into the foothills of the Altai Mountains 
+                to the home of a nomadic family. Settle into your ger and enjoy a traditional 
+                dinner of <em>besbarmak</em> or herder-style stews.
+            </p>
+
+            <h3 class="titles">
+                Day 3 — Nomadic Life Immersion
+            </h3>
+            <p>
+                Spend the day learning core nomadic skills: herding goats and sheep, milking 
+                yaks, preparing dairy products such as <em>airag</em> and <em>kurut</em>, collecting firewood 
+                and assisting with ger maintenance. In the evening, enjoy cultural stories 
+                around the stove with your host family.
+            </p>
+
+            <h3 class="titles">
+                Day 4 — Introduction to Golden Eagles
+            </h3>
+            <p>
+                Meet a local <strong>eagle master (berkutchi)</strong> and learn the fundamentals of the 
+                centuries-old tradition of eagle training. Observe feeding techniques, glove 
+                handling, equipment crafting and the unique partnership between hunter and eagle.
+            </p>
+
+            <h3 class="titles">
+                Day 5 — Horseback Riding & Eagle Training Practice
+            </h3>
+            <p>
+                Ride through the valleys and ridges where eagle hunters train their birds. 
+                Under supervision, try basic eagle handling and learn how the bird returns 
+                to the hunter's arm. Enjoy panoramic views of snow-covered peaks and 
+                glacial lakes.
+            </p>
+
+            <h3 class="titles">
+                Day 6 — Hunting Day in the Altai
+            </h3>
+            <p>
+                Embark on a full-day expedition with the berkutchi. Depending on the season, 
+                the eagle may hunt foxes, hares or other small animals. The experience is 
+                authentic — no staged performances — and follows traditional techniques that 
+                have been passed down for generations.
+            </p>
+
+            <h3 class="titles">
+                Day 7 — Cultural Crafts & Farewell Feast
+            </h3>
+            <p>
+                Learn traditional embroidery, felt-making or leather crafting from local 
+                artisans. In the evening, enjoy a Kazakh feast featuring music, dancing and 
+                folk storytelling. This is a rare chance to celebrate with the community 
+                before your return.
+            </p>
+
+            <h3 class="titles">
+                Day 8 — Return to Ulaanbaatar
+            </h3>
+            <p>
+                Fly back to Ulaanbaatar and transfer to your hotel or onward flight home. 
+                Optional city tour or souvenir shopping depending on your departure time.
+            </p>
+
+            <h2 class="titles">
+                Best Time to Travel:
+            </h2>
+            <p>
+                Eagle hunting season typically runs from <strong>October to March</strong>, when the cold 
+                weather enhances visibility and hunting conditions. The warmer months 
+                (June-September) are ideal for nomadic lifestyle immersion and mountain rides, 
+                though active hunting may not occur during summer.
+            </p>
+
+            <h2 class="titles">
+                Included in This Tour:
+            </h2>
+
+            <p>
+                Accommodation in traditional gers, all meals during the nomadic stay, 
+                transport, horses, national park fees, eagle hunter fees and the 
+                service of experienced guides are included.  
+                Not included: international flights, personal insurance, and optional activities.
+            </p>
+
+            <h2 class="titles">
+                Safety & Cultural Notes:
+            </h2>
+
+            <p>
+                The Altai region is remote and mountainous, and temperatures can drop very low 
+                during winter hunts. Guests should pack warm layers, waterproof boots and be 
+                prepared for rustic living. Respect for the eagle hunter and host family is 
+                essential; certain actions such as touching the eagle without permission are 
+                strictly prohibited.
+            </p>
+
+        </section>
+       
+        </div>
+    </div>
+        
+    <!-- Footer took example from: https://bootstrapexamples.com/@mateo/basic-footer -->
+         <footer class="footer"> <!-- contains  everything in the footer -->
+            
+            <div class="footer-container"> <!-- contains: 2 containers relater to copyright + 2 containers related to web links-->
+                
+                <div class="col-md-6"> <!-- contains container of copyright -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains copyright -->
+                        <ul class="copyright">
+                            <li>
+                                <p>
+                                    © 2025 NOMAD™ — NOMAD™ is a trademark of the NOMAD project.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-6"> <!-- contains: 2 containers relater to web links -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains container of the web links -->  
+                        
+                        <ul class="footer-text"> <!-- contains web links -->
+                            <li>
+                                <a href="#" class="col-md web-links">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="col-md-5 web-links">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <p>
+                            Twitter
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <p>
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <p>
+                            Instagram
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <p>
+                            LinkedIn
+                        </p>
+                    </a>
+                </div>
+            </div>
+         </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

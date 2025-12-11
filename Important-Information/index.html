@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+    <!-- Added Font Awesome from example of footer in: https://bootstrapexamples.com/@mateo/basic-footer -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!--Added jQuery for Phone Number input on form: https://www.w3schools.com/jquery/jquery_get_started.asp  -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jqueryfunctions.js"></script>
+    
+    <title>
+        Information Page
+    </title>
+</head>
+
+<body>
+    <!-- Navbar from Bootstrap: https://getbootstrap.com/docs/5.0/components/navbar/#scrolling -->
+    <div id="nomad-banner">
+        <img src="../Images/nomadlogoplaceholder2.png" alt="Nomad Logo">
+        <!-- Resized image to fit heigh of the logo, as it was loading for a long time. Original image is in the folder, can be opened with GIMP (free) to see original size -->
+        <img src="../Images/mongolia-flag-waving-transparent-background/448dfff0-9ebf-400b-817a-8a320207bced.png" alt="Mongolian Flag">
+    </div>
+    
+    <!-- Collapsing navbar with scrolling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link home" aria-current="page" href="../index.html">
+                    Home
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    About
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../Contact-Us/index.html">
+                    Contact Us
+                </a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeason" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Season
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSeason">
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Winter
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Spring
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Summer
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Autumn
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Activity
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivity">
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Hiking
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Hunting
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Camping
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="../Packages/index.html">
+                        Clubbing
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    Interactive Map
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../Recommendations/index.html">
+                    Recommendations
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="index.html">
+                    Important Info
+                </a>
+                </li>
+            </ul>
+            
+            <!-- Search bar -->
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" id="search-bar" type="search" placeholder="Search.." aria-label="Search">
+                <button class="btn btn-outline-success" id="search-btn" type="submit">
+                    🔍︎
+                </button>
+            </form> -->
+
+            <!-- Login button -->
+            <a href="../Login/index.html" class="btn btn-outline-success" id="login-btn">
+                Login
+            </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Info Page banner as per wireframe -->
+    <div class="banner">
+        <h1>Important Information</h1>
+    </div>
+    
+    <!-- 3 divs needed to match wireframe -->
+    <div class="important-info-container">
+    
+    <!-- Picture Background -->
+    <img src="../Images/pexels-iriser-3121285-resized.png" alt="Camel At The Desert in Inner Mongolia by Irina Iriser, Pexels.com" style="width: 100%; height: 100%;">
+        
+        <!-- Div that contains the text -->
+        <div class="important-info-content">
+            <h1 class="information-guide">NOMAD Traveller Information Guide</h1>
+
+            <!-- Disclaimers -->
+            <section>
+                <h2 class="titles">
+                    Disclaimers:
+                </h2>
+                <p>
+                    The information on this page is provided by NOMAD as a general guide for travellers planning a trip to Mongolia.
+                    Immigration rules, visa requirements, customs regulations and safety guidelines can change at any time without
+                    notice. Before you travel, you should always confirm details directly with official sources such as Mongolian
+                    embassies, consulates, the Immigration Agency of Mongolia and Mongolian Customs.
+                </p>
+                <p>
+                    This page does not replace professional legal, consular or medical advice. NOMAD cannot guarantee that every
+                    detail is up to date on the day you read it and is not responsible for any losses, fines, delays or issues
+                    resulting from changes in regulations or from relying solely on this information.
+                </p>
+            </section>
+
+            <!-- What you need to know -->
+            <section>
+                <h2 class="titles">
+                    What You Need to Know Before Travelling to Mongolia:
+                </h2>
+                <p>
+                    To enter Mongolia, your passport should be valid for at least six months beyond the date you arrive and
+                    should contain at least two blank pages for entry and exit stamps. Some nationalities may enter Mongolia
+                    without a visa for short tourism or business stays, while others must obtain a visa in advance. If you plan
+                    to stay longer than thirty days, you must register with the Immigration Agency of Mongolia within forty-eight
+                    hours of your arrival. Failing to register can lead to fines or problems when leaving the country.
+                </p>
+                <p>
+                    Mongolia has a harsh continental climate and very large open spaces. Summers are generally warm and short,
+                    while winters are extremely cold with temperatures that can fall far below zero. The most popular time to
+                    visit is from late spring to early autumn, when conditions are milder and many rural routes are accessible.
+                    Weather can still change quickly, especially in the countryside, so it is important to pack layers, waterproof
+                    clothing and sturdy footwear.
+                </p>
+                <p>
+                    Medical facilities in Ulaanbaatar are better than in the rest of the country, but services outside the capital
+                    may be limited. Travellers are strongly encouraged to have comprehensive travel insurance that includes
+                    medical treatment and emergency evacuation. You should speak with a healthcare professional before travelling
+                    to check which vaccinations or medications are recommended for your trip.
+                </p>
+                <p>
+                    The local currency is the Mongolian Tugrik (MNT). Credit and debit cards are increasingly accepted in
+                    Ulaanbaatar, but cash is still important for smaller businesses and for any travel outside major towns.
+                    Currency should be exchanged only at banks and official exchange points. ATMs are common in the capital but
+                    cannot be relied on in remote areas, so it is wise to plan ahead and carry enough cash for rural journeys.
+                </p>
+                <p>
+                    Mongolian culture places a high value on hospitality and respect. When visiting families, gers or religious
+                    sites, it is polite to follow local customs. Simple gestures such as accepting items with both hands, moving
+                    around the inside of a ger in a clockwise direction and avoiding stepping on thresholds are appreciated.
+                    At monasteries and temples, visitors should dress modestly and ask for permission before photographing monks,
+                    ceremonies or religious objects.
+                </p>
+            </section>
+
+            <!-- Visa process -->
+            <section>
+                <h2 class="titles">
+                    Visa Process and Who to Contact:
+                </h2>
+                <p>
+                    Visa rules for Mongolia depend on your nationality, your reason for visiting and the length of your stay.
+                    Some visitors can enter Mongolia visa-free for short tourist or business stays, while others must obtain a
+                    visa before arrival. For longer stays or for purposes such as work, study or extended travel, an appropriate
+                    visa is always required.
+                </p>
+                <p>
+                    In general, visa applications require a completed application form, a valid passport, passport photographs
+                    and payment of the relevant fee. Some travellers may also be able to apply for an electronic visa through
+                    Mongolia's official online system. Because the rules and eligible nationalities can change, it is important to
+                    check the latest information directly with Mongolian authorities before applying.
+                </p>
+                <p>
+                    For the most accurate and up-to-date visa information, travellers should contact the official Mongolian 
+                    authorities. Visa rules and eligibility vary depending on nationality, and requirements may change without notice. 
+                    The <span style="font-weight: 650;">Ministry of Foreign Affairs of Mongolia</span> 
+                    (<a href="https://www.gov.mn/en/organization/mfa">https://www.gov.mn/en/organization/mfa</a>) and the 
+                    <span style="font-weight: 650;">Immigration Agency of Mongolia</span> (<a href="https://immigration.gov.mn/">
+                    https://immigration.gov.mn/</a>) provide current guidance on visa types, extensions, and entry rules. Travellers 
+                    may also apply through Mongolia's official <span style="font-weight: 650;">eVisa portal</span> at 
+                    <a href="https://evisa.mn/">https://evisa.mn/</a> or contact their nearest <span style="font-weight: 650;">Mongolian 
+                    embassy or consulate</span>, listed at <a href="https://embassies.info/mongolia">https://embassies.info/mongolia</a>.
+                </p>
+                <p>
+                    If you remain in Mongolia for more than thirty days, you must register with the Immigration Agency of
+                    Mongolia within forty-eight hours of arriving. This requirement applies even if you entered the country
+                    without needing a visa. <span style="font-weight: 650;">Registration is usually done in person in Ulaanbaatar</span>. Overstaying your permitted
+                    period of stay or failing to register when required can result in fines and delays when you leave the country.
+                </p>
+                <p>
+                    For the most accurate and up-to-date information on visas and entry requirements, travellers should contact
+                    the nearest Mongolian embassy or consulate. These offices can provide details on visa types, supporting
+                    documents, current fees and processing times. Once in Mongolia, questions about registration, extensions or
+                    changes to your immigration status should be directed to the Immigration Agency of Mongolia.
+                </p>
+            </section>
+
+            <!-- Imports and exports -->
+            <section>
+                <h2 class="titles">
+                    Imports and Exports Allowed To and From Mongolia:
+                </h2>
+                <p>
+                    When entering Mongolia, travellers must follow Mongolian customs regulations. Certain items are strictly
+                    prohibited, including illegal drugs and narcotics, dangerous substances, unlicensed firearms, explosives,
+                    ammunition, pornographic materials and items that threaten public safety or national security. Endangered
+                    wildlife, products made from protected species and some biological materials may not be brought into or taken
+                    out of the country.
+                </p>
+                <p>
+                    Personal quantities of prescription medicine are normally allowed, but medication must be for your own use and
+                    should ideally be carried in original packaging together with any relevant prescriptions. Larger quantities of
+                    medicine, professional medical equipment and certain technical devices may need additional documentation or
+                    prior approval from Mongolian authorities.
+                </p>
+                <p>
+                    Travellers can carry foreign currency into Mongolia. However, amounts above a certain level, typically
+                    equivalent to several thousand US dollars, must be declared on arrival using a customs declaration form.
+                    Travellers are not normally allowed to import or export Mongolian Tugrik. You should keep your customs
+                    declaration until you leave the country, as officials may ask to see it when you depart if you are carrying
+                    large amounts of currency or expensive items.
+                </p>
+                <p>
+                    Goods brought into Mongolia for personal use, such as clothing, cameras, small electronic devices and other
+                    everyday items, are generally allowed and may be brought in duty-free in reasonable quantities. There are
+                    limits on duty-free tobacco, alcohol and perfume; anything above these limits may be subject to customs duty.
+                    If you are carrying items such as professional filming equipment, musical instruments or tools, it is a good
+                    idea to declare them on arrival so that you can take them out of the country again without difficulty.
+                </p>
+                <p>
+                    When leaving Mongolia, travellers must be careful with cultural and natural heritage items. Antiques,
+                    archaeological objects, religious artefacts, old manuscripts, museum-quality pieces and other items judged to
+                    have cultural or historical value cannot be exported without a special permit from the relevant Mongolian
+                    authority. Similar restrictions may apply to fossils, certain minerals and some types of precious stones.
+                    Without the correct paperwork, these items may be confiscated by customs officials.
+                </p>
+                <p>
+                    Travellers who have been hunting or taking part in sporting events should make sure that any weapons,
+                    ammunition and related equipment were declared on entry and are documented correctly for departure. If you are
+                    unsure whether an item may be imported or exported, you should ask Mongolian customs officials for guidance
+                    before travelling.
+                </p>
+            </section>
+
+        </div>
+
+
+    </div>
+        
+    <!-- Footer took example from: https://bootstrapexamples.com/@mateo/basic-footer -->
+         <footer class="footer"> <!-- contains  everything in the footer -->
+            
+            <div class="footer-container"> <!-- contains: 2 containers relater to copyright + 2 containers related to web links-->
+                
+                <div class="col-md-6"> <!-- contains container of copyright -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains copyright -->
+                        <ul class="copyright">
+                            <li>
+                                <p>
+                                    © 2025 NOMAD™ — NOMAD™ is a trademark of the NOMAD project.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-6"> <!-- contains: 2 containers relater to web links -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains container of the web links -->  
+                        
+                        <ul class="footer-text"> <!-- contains web links -->
+                            <li>
+                                <a href="#" class="col-md web-links">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="col-md-5 web-links">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <p>
+                            Twitter
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <p>
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <p>
+                            Instagram
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <p>
+                            LinkedIn
+                        </p>
+                    </a>
+                </div>
+            </div>
+         </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

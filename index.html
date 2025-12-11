@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+    <!-- Added Font Awesome from example of footer in: https://bootstrapexamples.com/@mateo/basic-footer -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!--Added jQuery for Phone Number input on form: https://www.w3schools.com/jquery/jquery_get_started.asp  -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jqueryfunctions.js"></script>
+       
+    <title>
+        Home
+    </title>
+</head>
+<body>
+    <!-- Navbar from Bootstrap: https://getbootstrap.com/docs/5.0/components/navbar/#scrolling -->
+    <div id="nomad-banner">
+        <img src="Images/nomadlogoplaceholder2.png" alt="Nomad Logo">
+        <!-- Resized image to fit heigh of the logo, as it was loading for a long time. Original image is in the folder, can be opened with GIMP (free) to see original size -->
+        <img src="Images/mongolia-flag-waving-transparent-background/448dfff0-9ebf-400b-817a-8a320207bced.png" alt="Mongolian Flag">
+    </div>
+    
+    <!-- Collapsing navbar with scrolling -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link home active" aria-current="page" href="index.html">
+                    Home
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    About
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Contact-Us/index.html">
+                    Contact Us
+                </a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSeason" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Season
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSeason">
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Winter
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Spring
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Summer
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Autumn
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownActivity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Book by Activity
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownActivity">
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Hiking
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Hunting
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Camping
+                    </a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Packages/index.html">
+                        Clubbing
+                    </a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">
+                    Interactive Map
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Recommendations/index.html">
+                    Recommendations
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Important-Information/index.html">
+                    Important Info
+                </a>
+                </li>
+            </ul>
+            
+            <!-- Search bar -->
+            <!-- <form class="d-flex">
+                <input class="form-control me-2" id="search-bar" type="search" placeholder="Search.." aria-label="Search">
+                <button class="btn btn-outline-success" id="search-btn" type="submit">
+                    🔍︎
+                </button>
+            </form> -->
+
+            <!-- Login button -->
+            <a href="Login/index.html" class="btn btn-outline-success" id="login-btn">
+                Login
+            </a>
+            </div>
+        </div>
+    </nav>
+            
+    <!-- Home Page banner as per wireframe -->
+    <div class="banner">
+        <h1>Welcome!</h1>
+    </div>
+            
+    <!-- Container for Image banner and cards -->
+    <div class="homepage-container">
+
+        <!-- Div for image banner -->
+        <div class="image-banner">
+            <img src="Images/pexels-julia-volk-5110965-resize-banner-home.png" alt="Snowy mountains over slope with plants in Mongolia by Julia Volk, Pexels" style="width: 100%; height: 100%;">
+        </div>
+
+        <!-- Div for package cards -->
+        <div class="package-cards">
+                    
+            <div class="first-row" style="width: 100%; height: 100%;">
+
+                <!-- CARD 1 -->
+                <div class="card works" style="width: 18rem;">
+                <img src="Images/pexels-julia-volk-6408365-resized-card.png" class="card-img-top" alt="A Man in Fur Jacket with Golden Eagle in Mongolia by Julia Volk, Pexels" style="width: 100%; height: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Enjoy a Nomad Adventure Eagle Hunting!
+                    </h5>
+                    <p class="card-text">
+                        Step into the ancient world of Mongolian nomads and experience one of the 
+                        world's oldest hunting traditions — <strong>eagle hunting</strong> with the Kazakh people 
+                        of Western Mongolia!
+                    </p>
+                        <a href="Packages/index.html" class="btn btn-primary card-btn">
+                            Read More
+                        </a>
+                    </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="card doesnt-work" style="width: 18rem;">
+                    <img src="Images/pexels-phaeng-_yo-1503481-35128396-resized-card.png" class="card-img-top" alt="Modern Architecture in Ulaanbaatar Cityscape, Mongolia, by Phaeng Yo, Pexels" style="width: 100%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title-doesnt-work">
+                            TBD
+                        </h5>
+                        <p class="card-text">
+                            More tour packages coming soon!
+                        </p>
+                        <button class="btn btn-primary card-btn-doesnt-work">
+                            Coming Soon!
+                        </button>
+                    </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="card doesnt-work" style="width: 18rem;">
+                    <img src="Images/pexels-soo-ann-woon-571568-1422518-resize-card.png" class="card-img-top" alt="Landscape Photography of Three Tentsin Mongolia by Soo Ann Woon, Pexels" style="width: 100%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title-doesnt-work">
+                            TBD
+                        </h5>
+                        <p class="card-text">
+                            More tour packages coming soon!
+                        </p>
+                        <button class="btn btn-primary card-btn-doesnt-work">
+                            Coming Soon!
+                        </button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="second-row" style="width: 100%; height: 100%;">
+
+                    <!-- CARD 4 -->
+                    <div class="card doesnt-work" style="width: 18rem;">
+                    <img src="Images/pexels-cottonbro-9477563-resized-card.png" class="card-img-top" alt="A Dancing Woman in Traditional Mongolian Clothing by Cottonbro Studio, Pexels" style="width: 100%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title-doesnt-work">
+                            TBD
+                        </h5>
+                        <p class="card-text">
+                            More tour packages coming soon!
+                        </p>
+                        <button class="btn btn-primary card-btn-doesnt-work">
+                            Coming Soon!
+                        </button>
+                    </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="card doesnt-work" style="width: 18rem;">
+                    <img src="Images/pexels-aagii-aagii-494659827-16010575-resized-card.png" class="card-img-top" alt="Woman in Traditional Costume Sitting on Throne in Mongolia, by Aagii Aagii, Pexels" style="width: 100%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title-doesnt-work">
+                            TBD
+                        </h5>
+                        <p class="card-text">
+                            More tour packages coming soon!
+                        </p>
+                        <button class="btn btn-primary card-btn-doesnt-work">
+                            Coming Soon!
+                        </button>
+                    </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="card doesnt-work" style="width: 18rem;">
+                    <img src="Images/pexels-arthousestudio-4321509-resized-card.png" class="card-img-top" alt="Experienced Mongolian male rider in prairie by ArtHouse Studio, Pexels" style="width: 100%; height: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title-doesnt-work">
+                            TBD
+                        </h5>
+                        <p class="card-text">
+                            More tour packages coming soon!
+                        </p>
+                        <button class="btn btn-primary card-btn-doesnt-work">
+                            Coming Soon!
+                        </button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <footer class="footer"> <!-- contains  everything in the footer -->
+            
+            <div class="footer-container"> <!-- contains: 2 containers relater to copyright + 2 containers related to web links-->
+                
+                <div class="col-md-6"> <!-- contains container of copyright -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains copyright -->
+                        <ul class="copyright">
+                            <li>
+                                <p>
+                                    © 2025 NOMAD™ — NOMAD™ is a trademark of the NOMAD project.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-6"> <!-- contains: 2 containers relater to web links -->
+                    
+                    <div class="col-md-6 text-md-end"> <!-- contains container of the web links -->  
+                        
+                        <ul class="footer-text"> <!-- contains web links -->
+                            <li>
+                                <a href="#" class="col-md web-links">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="col-md-5 web-links">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <p>
+                            Twitter
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <p>
+                            Facebook
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <p>
+                            Instagram
+                        </p>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <p>
+                            LinkedIn
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
